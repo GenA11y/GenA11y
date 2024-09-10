@@ -1,4 +1,4 @@
-## Hi there 👋
+## The companion website of GenA11y
 
 <!--
 **GenA11y/GenA11y** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
