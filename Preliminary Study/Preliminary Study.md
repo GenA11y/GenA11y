@@ -46,10 +46,11 @@ Prompt Template:
 *a. List each relevant WCAG 2.2 success criterion that applies to the provided HTML code.*
 
 *b. For each criterion, perform a detailed, step-by-step evaluation:*
-	*i. Explain what the criterion requires.*
-	*ii. Examine the HTML code and identify specific elements or attributes that relate to the criterion.*
-	*iii. Assess whether the code meets the criterion based on your explanation in Step i.*
-	*iv. Identify any violations.*
+
+​	*i. Explain what the criterion requires.*
+​	*ii. Examine the HTML code and identify specific elements or attributes that relate to the criterion.*
+​	*iii. Assess whether the code meets the criterion based on your explanation in Step i.*
+​	*iv. Identify any violations.*
 
 
 
