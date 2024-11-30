@@ -41,19 +41,20 @@ We experimented with several prompting strategies to guide the LLM in identifyin
   *Analyze the following HTML code and identify any WCAG 2.2 violations."*
 
 **Chain-of-Thought Prompting:**
-Prompt Template: 
 
-*a. List each relevant WCAG 2.2 success criterion that applies to the provided HTML code.*
+- Prompt Template: 
 
-*b. For each criterion, perform a detailed, step-by-step evaluation:*
+​	*a. List each relevant WCAG 2.2 success criterion that applies to the provided HTML code.*
 
-​	*i. Explain what the criterion requires.*
+​	*b. For each criterion, perform a detailed, step-by-step evaluation:*
 
-​	*ii. Examine the HTML code and identify specific elements or attributes that relate to the criterion.*
+​		*i. Explain what the criterion requires.*
 
-​	*iii. Assess whether the code meets the criterion based on your explanation in Step i.*
+​		*ii. Examine the HTML code and identify specific elements or attributes that relate to the criterion.*
 
-​	*iv. Identify any violations.*
+​		*iii. Assess whether the code meets the criterion based on your explanation in Step i.*
+
+​		*iv. Identify any violations.*
 
 
 
