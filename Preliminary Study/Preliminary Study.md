@@ -40,7 +40,7 @@ We experimented with several prompting strategies to guide the LLM in identifyin
 
   *Analyze the following HTML code and identify any WCAG 2.2 violations."*
 
-**Chain-of-Thought Prompting:**
+**3. Chain-of-Thought Prompting:**
 
 - Prompt Template: 
 
