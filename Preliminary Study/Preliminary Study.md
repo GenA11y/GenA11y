@@ -9,13 +9,13 @@ We experimented with several prompting strategies to guide the LLM in identifyin
 
 - Prompt Template: 
 
-*"Analyze the following HTML code for any WCAG 2.2 success criterion violations and list them."*
+​	*"Analyze the following HTML code for any WCAG 2.2 success criterion violations and list them."*
 
 **2.HTML Input with Demonstration:**
 
 - *Prompt Template 1:*
 
-- *"Here is an example of a failure for SC 1.3.1: a table is formatted using white space characters.* 
+  *"Here is an example of a failure for SC 1.3.1: a table is formatted using white space characters.* 
   *White space formatted table: table element…*
 
    *Reason for Failure: ...* 
