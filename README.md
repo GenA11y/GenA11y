@@ -6,6 +6,8 @@
 
 - The [preliminary study](https://github.com/GenA11y/GenA11y/blob/main/Preliminary%20Study/Preliminary%20Study.md) was conducted on five university home pages. This study helped us identify challenges and select the most suitable prompting strategies.
 
+- The [one-to-one comparison](https://gena11y.github.io/Coverage%20-%20One%20to%20One.html) regarding Coverage (RQ2).
+
 - The [Augment Accessibility Tool Audit dataset](https://github.com/GenA11y/GenA11y/tree/main/Augmented%20Accessibility%20Tool%20Audit/tests), which consists of 148 web pages with accessibility issues. Each accessibility issue is grouped under a specific success criterion. For instance, 'buttons-empty-alt-attribute-on-image-button.html' is placed under 'SC 1.1.1'. This dataset is used for RQ1 Recall and the RQ4 Ablation Experiment.
 
 - The [Ma11y](https://github.com/mahantaf/mahantaf.github.io/tree/main) dataset, from a previous study, includes accessibility issues that were programmatically injected into real web pages. This dataset is used for RQ1 Recall.
