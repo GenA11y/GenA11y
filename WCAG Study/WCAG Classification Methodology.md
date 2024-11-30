@@ -6,7 +6,7 @@ We categorized the WCAG success criteria using the following approach. First, we
 
 By contrast, the screenshot of SC 2.5.1 below indicates it needs dynamic analysis, as illustrated by the keyword “Let users operate” in its Goal.
 
-![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdbPybhfUMbJQbYvucvpiv_dZ_fHIQtS8oYQxrcSiU0xrbVDzG4d_v4INH_y6ICjEH7a0N85b8eVuHQCuQ4VttkkKd6vssfugJv8P4Q5UgZoCWBswTDI00u4PAdS6s9pshteT-DHw?key=mx2ET2eS5ycclHd4oSNJdiI6)
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfD7VLor9BEpiHTmrccJ02Q2e217vONUsvo9yzoNj0p4yHJ71Gj33hiZZMH3HBaShng9tBRHHdM-DDAvYlsepfT8y2CIEmxTHm4KTda0DztcDNiFhOIN7z2769t7decMLWFZWxnTA?key=mx2ET2eS5ycclHd4oSNJdiI6)
 
 
 
