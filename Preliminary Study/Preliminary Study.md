@@ -13,7 +13,7 @@ We experimented with several prompting strategies to guide the LLM in identifyin
 
 **2.HTML Input with Demonstration:**
 
-- *Prompt Template 1:*
+- Prompt Template 1:
 
   *"Here is an example of a failure for SC 1.3.1: a table is formatted using white space characters.* 
   *White space formatted table: table element…*
@@ -42,19 +42,13 @@ We experimented with several prompting strategies to guide the LLM in identifyin
 
 **3. Chain-of-Thought Prompting:**
 
-- Prompt Template: 
-
-​	*a. List each relevant WCAG 2.2 success criterion that applies to the provided HTML code.*
-
-​	*b. For each criterion, perform a detailed, step-by-step evaluation:*
-
-​		*i. Explain what the criterion requires.*
-
-​		*ii. Examine the HTML code and identify specific elements or attributes that relate to the criterion.*
-
-​		*iii. Assess whether the code meets the criterion based on your explanation in Step i.*
-
-​		*iv. Identify any violations.*
+- Prompt Template:
+  1. *List each relevant WCAG 2.2 success criterion that applies to the provided HTML code.*
+  2. *For each criterion, perform a detailed, step-by-step evaluation:*
+     - *i. Explain what the criterion requires.*
+     - *ii. Examine the HTML code and identify specific elements or attributes that relate to the criterion.*
+     - *iii. Assess whether the code meets the criterion based on your explanation in Step i.*
+     - *iv. Identify any violations.*
 
 
 
