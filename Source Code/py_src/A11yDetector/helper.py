@@ -39,16 +39,31 @@ def chunk_data(data, threshold_tokens: int = 80000, max_chunk_tokens: int = 4000
             raise ValueError("Input data should be a dictionary or list.")
 
     def chunk_by_token_count(data, max_tokens):
+        if isinstance(data, dict):
+            items = list(data.items())
+        elif isinstance(data, list):
+            items = data
+        else:
+            raise ValueError("Input data should be a dictionary or list.")
+
         current_tokens = 0
-        current_chunk = []
-        for item in data:
-            item_tokens = count_tokens(str(item))
+        current_chunk = {} if isinstance(data, dict) else []
+        for item in items:
+            if isinstance(data, dict):
+                key, value = item
+                item_tokens = count_tokens(str(key)) + count_tokens(str(value))
+            else:
+                item_tokens = count_tokens(str(item))
+
             if current_tokens + item_tokens > max_tokens:
                 yield current_chunk
-                current_chunk = [item]
+                current_chunk = {key: value} if isinstance(data, dict) else [item]
                 current_tokens = item_tokens
             else:
-                current_chunk.append(item)
+                if isinstance(data, dict):
+                    current_chunk[key] = value
+                else:
+                    current_chunk.append(item)
                 current_tokens += item_tokens
         if current_chunk:
             yield current_chunk
@@ -56,14 +71,7 @@ def chunk_data(data, threshold_tokens: int = 80000, max_chunk_tokens: int = 4000
     total_tokens = total_data_tokens(data)
 
     if total_tokens > threshold_tokens:
-        if isinstance(data, dict):
-            items = [{key: value} for key, value in data.items()]
-        elif isinstance(data, list):
-            items = data
-        else:
-            raise ValueError("Input data should be a dictionary or list.")
-
-        return list(chunk_by_token_count(items, max_chunk_tokens))
+        return list(chunk_by_token_count(data, max_chunk_tokens))
     else:
         return [data]
 

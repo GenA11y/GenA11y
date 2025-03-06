@@ -671,8 +671,37 @@ if __name__ == "__main__":
     # Set up the logger
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     logger = logging.getLogger(__name__)
-    website_data = extract_data_from_excel("Real Website URLS.xlsx", 0, 29)
+    # website_data = extract_data_from_excel("Real Website URLS.xlsx", 2, 5)
+    # for url, folder_name in website_data:
+    #     logger.info('The current URL is: ' + url + ':')
+    #     delete_all_files_in_folder(TEMP_FILE_FOLDER)
+    #     main_process(url, folder_name)
+    # Create the Variability folder if it doesn't exist
+    VARIABILITY_FOLDER = "Variability"
+    if not os.path.exists(VARIABILITY_FOLDER):
+        os.makedirs(VARIABILITY_FOLDER)
+
+    website_data = extract_data_from_excel("Real Website URLS.xlsx", 0, 5)
+
     for url, folder_name in website_data:
-        logger.info('The current URL is: ' + url + ':')
-        delete_all_files_in_folder(TEMP_FILE_FOLDER)
-        main_process(url, folder_name)
+        logger.info(f'The current URL is: {url}')
+
+        # Create the folder for the current website under the Variability folder
+        current_folder_path = os.path.join(VARIABILITY_FOLDER, folder_name)
+        if not os.path.exists(current_folder_path):
+            os.makedirs(current_folder_path)
+
+        # Run the process 3 times for each URL
+        for run_number in range(1, 4):
+            logger.info(f'Run {run_number} for URL: {url}')
+
+            # Create a subfolder for this run
+            run_folder = os.path.join(current_folder_path, f'Run_{run_number}')
+            if not os.path.exists(run_folder):
+                os.makedirs(run_folder)
+
+            # Clear the temporary file folder
+            delete_all_files_in_folder(TEMP_FILE_FOLDER)
+
+            # Execute the main process
+            main_process(url, run_folder)
